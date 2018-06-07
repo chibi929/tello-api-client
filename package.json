@@ -1,0 +1,30 @@
+{
+  "name": "tello-api-client",
+  "version": "0.0.2",
+  "description": "Tello API Client for Node.js.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "git@github.com:chibi929/tello-api-client.git",
+  "author": "chibi929",
+  "license": "MIT",
+  "keywords": [
+    "Tello"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.1",
+    "@types/node": "^10.3.1",
+    "mocha": "^5.2.0",
+    "typescript": "^2.9.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf lib",
+    "prerelease-build": "npm run clean && rm -rf node_modules",
+    "release-build": "yarn && npm run build",
+    "preversion": "npm run release-build && npm run test",
+    "postversion": "git push origin --tags",
+    "test": "mocha lib/*.spec.js"
+  }
+}

@@ -1,0 +1,10 @@
+.git
+.gitignore
+.npmignore
+tsconfig.json
+yarn.lock
+*.js.map
+*.spec.*
+
+# raw typescript
+src/
