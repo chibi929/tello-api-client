@@ -1,5 +1,7 @@
 # tello-api-client
 
+[![npm version](https://badge.fury.io/js/tello-api-client.svg)](https://www.npmjs.com/package/tello-api-client)
+
 ## Overview
 
 Tello API Client for Node.js.  
