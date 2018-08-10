@@ -20,7 +20,7 @@ export class TelloClient {
   private readonly socket = dgram.createSocket('udp4');
   private readonly config: ITelloConfig;
 
-  constructor(ipAddress: string, port: number) {
+  constructor(ipAddress: string = '192.168.10.1', port: number = 8889) {
     this.config = {
       address: ipAddress,
       port : port
