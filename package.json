@@ -19,9 +19,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf lib",
-    "prerelease-build": "npm run clean && rm -rf node_modules",
+    "prerelease-build": "npm run release-clean",
     "release-build": "yarn && npm run build",
+    "postrelease-build": "rm -rf node_modules && yarn --prod",
+    "clean": "rm -rf lib",
+    "release-clean": "npm run clean && rm -rf node_modules",
     "preversion": "npm run release-build && npm run test",
     "postversion": "git push origin --tags",
     "test": "mocha lib/*.spec.js"
