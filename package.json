@@ -1,6 +1,6 @@
 {
   "name": "tello-api-client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tello API Client for Node.js.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
