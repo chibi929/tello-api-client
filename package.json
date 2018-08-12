@@ -24,7 +24,7 @@
     "postrelease-build": "rm -rf node_modules && yarn --prod",
     "clean": "rm -rf lib",
     "release-clean": "npm run clean && rm -rf node_modules",
-    "preversion": "npm run release-build && npm run test",
+    "preversion": "npm run release-clean && yarn && npm run build && npm run test",
     "postversion": "git push origin --tags",
     "test": "mocha lib/*.spec.js"
   }
